@@ -1,26 +1,12 @@
 // *** Write your code here*
 const  appendNumber = (number) => {
-    document.getElementById("result").innerHTML += number;
+    document.getElementById("result").value += number;
 }
-function clear(blank) {
-   blank=" ";
-   document.getElementById("result").innerHTML += blank;
+const clearScreen = () => {
+   document.getElementById("result").value = ""
 }
-
-function add() {
-   document.getElementById("result").innerHTML += "+";
+const calculate = () => {
+   var p = document.getElementById("result").value;
+   var q = eval(p);
+   document.getElementById("result").value = q;
 }
-function subtract() {
-   document.getElementById("result").innerHTML += "-";
-}
-function multiply() {
-   document.getElementById("result").innerHTML += "*";
-}
-function division() {
-   document.getElementById("result").innerHTML += "/";
-}
-
-function total() {
-     var egal = eval(document.getElementById('result').innerHTML);
-     document.getElementById('result').innerHTML = egal;
- }
